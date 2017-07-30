@@ -54,6 +54,9 @@ extension FileListViewController: UITableViewDataSource, UITableViewDelegate {
             }
             else {
                 let filePreview = previewManager.previewViewControllerForFile(selectedFile, fromNavigation: true)
+                if self.navigationController?.tabBarController?.tabBar.isHidden == false {
+                    self.navigationController?.tabBarController?.tabBar.isHidden = true
+                }
                 self.navigationController?.pushViewController(filePreview, animated: true)
             }
         }
