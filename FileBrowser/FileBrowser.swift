@@ -70,4 +70,8 @@ open class FileBrowser: UINavigationController {
         self.fileList = fileListViewController
     }
     
+    open func reload() {
+        fileList?.reload()
+    }
+    
 }

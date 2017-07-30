@@ -134,6 +134,15 @@ class FileListViewController: UIViewController {
         })
         tableView.reloadData()
     }
+    
+    func reload() {
+        guard let teview = tableView else {
+            return
+        }
+        print("reloaded")
+        prepareData()
+        teview.reloadData()
+    }
 
 }
 
